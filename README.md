@@ -3,7 +3,7 @@
 Página web personal desplegada de forma automática mediante **integración continua (CI)**
 con **GitHub Actions** y **Surge.sh**.
 
-- **Estudiante:** Michael D. Meshell Sanchez Heredia
+- **Estudiante:** Michael D Meshell Sanchez Heredia
 - **Matrícula:** 2024-0063
 - **Asignatura:** DevOps — 1er Parcial
 
