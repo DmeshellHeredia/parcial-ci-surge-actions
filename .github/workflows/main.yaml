@@ -1,0 +1,29 @@
+name: CI - Deploy a Surge.sh
+
+# Se ejecuta en cada push a la rama main
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar Surge.sh
+        run: npm install -g surge
+
+      - name: Desplegar a Surge.sh
+        env:
+          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+        run: surge ./ --domain michael-sanchez-2024-0063-ci.surge.sh

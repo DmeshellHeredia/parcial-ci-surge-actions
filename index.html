@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Meshell Sanchez Heredia · Portafolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #1e293b;
+      --card: #ffffff;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --text: #1e293b;
+      --muted: #64748b;
+      --line: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+      color: var(--text);
+      background: #f1f5f9;
+      line-height: 1.6;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      background: linear-gradient(135deg, var(--bg) 0%, var(--primary-dark) 100%);
+      color: #fff;
+      padding: 90px 24px 70px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      margin: 0 auto 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.12);
+      border: 2px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 2.2rem;
+    }
+
+    .hero .role {
+      font-size: 1.1rem;
+      color: #bfdbfe;
+      margin: 0 0 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* ---------- Layout ---------- */
+    .container {
+      max-width: 920px;
+      margin: -40px auto 0;
+      padding: 0 24px 60px;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 34px 32px;
+      margin-bottom: 26px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    section h2 {
+      margin: 0 0 18px;
+      font-size: 1.4rem;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2::before {
+      content: "";
+      width: 6px;
+      height: 24px;
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    /* ---------- Tech chips ---------- */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      background: #eff6ff;
+      color: var(--primary-dark);
+      border: 1px solid #dbeafe;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      cursor: default;
+    }
+
+    .chip:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(37, 99, 235, 0.18);
+    }
+
+    /* ---------- Projects ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .project {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .project:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+    }
+
+    .project h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .project p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 28px 24px 40px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer .year {
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    @media (max-width: 540px) {
+      .hero {
+        padding: 70px 18px 60px;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      section {
+        padding: 26px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="avatar">MS</div>
+    <h1>Michael D. Meshell Sanchez Heredia</h1>
+    <p class="role">Estudiante de Ingeniería · Entusiasta de DevOps</p>
+    <span class="badge">Matrícula: 2024-0063</span>
+  </header>
+
+  <main class="container">
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>
+        ¡Hola! Soy Michael, estudiante apasionado por el desarrollo de software y
+        la cultura DevOps. Me interesa todo lo relacionado con la automatización,
+        la integración continua y el despliegue de aplicaciones de forma eficiente.
+      </p>
+      <p class="muted">
+        Esta página es parte de mi primer parcial de DevOps, donde implemento un
+        flujo de integración continua con GitHub Actions y Surge.sh: cada cambio
+        que subo al repositorio se publica automáticamente en la web.
+      </p>
+    </section>
+
+    <section id="tecnologias">
+      <h2>Tecnologías</h2>
+      <div class="chips">
+        <span class="chip">HTML5</span>
+        <span class="chip">CSS3</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Git</span>
+        <span class="chip">GitHub</span>
+        <span class="chip">GitHub Actions</span>
+        <span class="chip">Surge.sh</span>
+        <span class="chip">CI/CD</span>
+        <span class="chip">Linux</span>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos e intereses</h2>
+      <div class="grid">
+        <article class="project">
+          <h3>CI con Surge.sh</h3>
+          <p>Despliegue automático de esta página usando GitHub Actions y Surge.</p>
+        </article>
+        <article class="project">
+          <h3>Automatización</h3>
+          <p>Explorar pipelines y scripts que reduzcan tareas manuales repetitivas.</p>
+        </article>
+        <article class="project">
+          <h3>Desarrollo Web</h3>
+          <p>Crear interfaces limpias y responsivas con HTML, CSS y JavaScript.</p>
+        </article>
+        <article class="project">
+          <h3>Aprendizaje continuo</h3>
+          <p>Profundizar en contenedores, nube y buenas prácticas de DevOps.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Hecho con HTML, CSS y JavaScript · Desplegado con GitHub Actions + Surge.sh
+    </p>
+    <p>&copy; <span class="year" id="year"></span> Michael Meshell Sanchez Heredia · Matrícula 2024-0063</p>
+  </footer>
+
+  <script>
+    // JavaScript mínimo: año dinámico en el footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
